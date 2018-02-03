@@ -1,6 +1,9 @@
 #include "vehicle.h"
 Vehicle::Vehicle()
 {
+    m_engineOn = false;
+    m_currentSpeed = 0;
+    m_currentState = stopped;
 }
 
 Vehicle::Vehicle(VehicleInfo& info, fuelLevel& fLevel)
@@ -9,6 +12,7 @@ Vehicle::Vehicle(VehicleInfo& info, fuelLevel& fLevel)
     m_engineOn = false;
     m_currentSpeed = 0;
     m_fuelLevel = fLevel;
+    m_currentState = stopped;
 }
 
 Vehicle::~Vehicle()
@@ -30,6 +34,13 @@ fuelLevel Vehicle::getFuelLevel() const
 {
     return m_fuelLevel;
 }
-
+void Vehicle::setcurrentSpeed(int speed)
+{
+    m_currentSpeed = speed;
+}
+int Vehicle::getcurrentSpeed() const
+{
+    return m_currentSpeed;
+}
 
 

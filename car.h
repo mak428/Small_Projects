@@ -18,7 +18,6 @@ class Car:public Vehicle
         void decelerate(int speed);
         void addFuel();
     private:
-        state m_currentState;
         bool m_engineRunning;    
         
 

@@ -4,8 +4,6 @@
 #include <ctime>
 using namespace std;
 
- #define __DEBUG__ 1
-
 void drawLine(int n, char symbol);
 void rules();
 

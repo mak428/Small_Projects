@@ -9,7 +9,7 @@ int main(void)
     string   year = "1998";
     string   make = "Acura";
     string   model = "3.2 TL";
-    string   licensePlate = "4BNJ2L";
+    string   licensePlate = "4BNJ874";
 
     Build    build
     {
@@ -52,7 +52,8 @@ int main(void)
    
     cout << "Accelerating to 40 mph...\n";
     myNewCar.accelerate(40);
-    cout << "Done accelerating.\n";
+    cout << "Current speed = " << myNewCar.getcurrentSpeed();
+    cout << "\n Done accelerating.\n";
 
     cout << "Adding fuel ...\n"; 
     myNewCar.addFuel();
@@ -60,7 +61,8 @@ int main(void)
 
     cout << "Decelerating to 10 mph...\n";
     myNewCar.decelerate(10);
-    cout << "Done decelerating.\n";
+    cout << "Current speed = " << myNewCar.getcurrentSpeed();
+    cout << "\n Done decelerating.\n";
     
     cout << "Stopping the car...\n";
     ;

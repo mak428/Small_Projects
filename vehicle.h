@@ -73,7 +73,8 @@ class Vehicle
          Vehicle(VehicleInfo& vInfo, fuelLevel& fLevel);
         ~Vehicle();
          virtual VehicleInfo getVehicleInfo() const;
-         virtual fuelLevel getFuelLevel( ) const;
+         virtual fuelLevel getFuelLevel() const;
+         virtual int  getcurrentSpeed() const;
     protected:
         virtual state start()=0;
         virtual state stop()=0;
@@ -82,12 +83,14 @@ class Vehicle
         virtual void addFuel()=0;
         virtual void setVehicleInfo(VehicleInfo& vInfo);
         virtual void setFuelLevel(fuelLevel fLevel);
-  
+        virtual void setcurrentSpeed(int speed);  
         bool m_engineOn;
         int m_currentSpeed;
+        state m_currentState;
     private:
         VehicleInfo m_vehicleInfo;
         fuelLevel m_fuelLevel;
+        
 
 };
 
