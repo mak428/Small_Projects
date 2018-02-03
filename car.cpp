@@ -49,12 +49,13 @@ void Car::accelerate(int speed)
         Vehicle::m_currentState == stopped)
     {
         Vehicle::m_currentState = accelerating;
+        sleep(10);
         m_currentSpeed = speedDifference + m_currentSpeed;   
     }
     if (Vehicle::m_currentState == deccelerating)
     {
-        sleep(10);
         Vehicle::m_currentState = accelerating;//accelerate
+        sleep(10);
         m_currentSpeed = speedDifference + m_currentSpeed;
     }
 
@@ -73,7 +74,7 @@ void Car::decelerate(int speed)
 }
 void Car::addFuel()
 {
-    if (Vehicle::getFuelLevel() < half)
+    if (Vehicle::m_currentState ==  stopped && Vehicle::getFuelLevel() < half)
     {
         Vehicle::setFuelLevel(full);//fill the fuel level to full
     }

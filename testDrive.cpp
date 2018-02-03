@@ -47,17 +47,21 @@ int main(void)
          <<  " Make = " << carInfo.m_make
          <<  " Model = " << carInfo.m_model
          <<  " License Plate = " << carInfo.m_licensePlate
-         <<  " color = "  << carInfo.m_build.m_color;
+         <<  " color = "  << carInfo.m_build.m_color
+         <<   "\n";
+
     cout << " The car is in " << myNewCar.start() << " state\n";
-   
+
+    cout << "Adding fuel ...\n"; 
+    myNewCar.addFuel();
+    cout << "Done fueling.\n";
+
     cout << "Accelerating to 40 mph...\n";
     myNewCar.accelerate(40);
     cout << "Current speed = " << myNewCar.getcurrentSpeed();
     cout << "\n Done accelerating.\n";
 
-    cout << "Adding fuel ...\n"; 
-    myNewCar.addFuel();
-    cout << "Done fueling.\n";
+    
 
     cout << "Decelerating to 10 mph...\n";
     myNewCar.decelerate(10);

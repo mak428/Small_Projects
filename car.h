@@ -2,10 +2,13 @@
 #include "vehicle.h"
 #include <chrono>
 #include <thread>
+#include <iostream>
+using std::cout;
 
 static void sleep(int sec)
 {
-    std::this_thread::sleep_for(std::chrono::seconds(sec));
+      cout << "zzzZZZzzz ...\n";
+      std::this_thread::sleep_for(std::chrono::seconds(sec));
 }
 class Car:public Vehicle
 {
